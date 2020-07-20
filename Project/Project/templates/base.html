@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Virtual Fly</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap
+.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></
+script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script
+>
+  <script src="http://webclass.cs.mercer.edu/~allen_b/virtualfly/main.js"></script>
+  <link href="http://webclass.cs.mercer.edu/~allen_b/virtualfly/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p><img src="http://webclass.cs.mercer.edu/~allen_b/virtualfly/fruitfliesBanner.png" alt="Fruit Flies" /></p>
+  <h1 class="vfliesh1">Welcome to our Virtual Fly Website!</h1>
+</div>
+<div class="container" style="margin-top:30px">
+  <div class="row">
+    <div class="col-sm-6">
+    {% block content %}
+      <p> This is our original block content.</p>
+    {% endblock content %}
+      <h2>Female</h2>
+           <p>
+          <input type="checkbox" id="fa" name="female" value="Desc of a"> <label for="fa">De
+sc. of a</label>
+          <input type="checkbox" id="fb" name="female" value="Desc of b"> <label for="fb">De
+sc. of b</label>
+          <input type="checkbox" id="fc" name="female" value="Desc of c"> <label for="fc">De
+sc. of c</label>
+          <input type="checkbox" id="fd" name="female" value="Desc of d"> <label for="fd">De
+sc. of d</label>
+          <input type="checkbox" id="fe" name="female" value="Desc of e"> <label for="fe">De
+sc. of e</label>
+          <input type="checkbox" id="ff" name="female" value="Desc of f"> <label for="ff">De
+sc. of f</label>
+      </p>
+      <hr class="d-sm-none">
+      <h2>Male</h2>
+      <p>
+          <input type="checkbox" id="ma" name="male" value="Desc of a"> <label for="ma">Desc
+. of a</label>
+          <input type="checkbox" id="mb" name="male" value="Desc of b"> <label for="mb">Desc
+. of b</label>
+          <input type="checkbox" id="mc" name="male" value="Desc of c"> <label for="mc">Desc
+. of c</label>
+          <input type="checkbox" id="md" name="male" value="Desc of d"> <label for="md">Desc
+. of d</label>
+          <input type="checkbox" id="me" name="male" value="Desc of e"> <label for="me">Desc
+. of e</label>
+          <input type="checkbox" id="mf" name="male" value="Desc of f"> <label for="mf">Desc
+. of f</label>
+      </p>
+    </div>
+    <div class="col-sm-1">
+            <button onclick="updateFlies();" class="btn btn-primary btn-lg" type="button" va
+lue="+">+</button>
+    </div>
+    <div class="col-sm-5">
+      <h2>Flies Generated</h2>
+      <textarea id="GenFlies" name="GenFlies" rows="8" cols="50"></textarea>
+    </div>
+  </div>
+</div>
+
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+        <button type="button">Test Py</button>
+  <p>Footer</p>
+</div>
+</body>
+</html>
